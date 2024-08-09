@@ -51,3 +51,35 @@ body {
   }
 }
 
+@layer components {
+  .btn-primary {
+    @apply inline-flex justify-center items-center px-6 py-2.5 rounded-full capitalize font-bold text-sm lg:text-base transition-colors ease-in-out duration-300 bg-transparent text-white border-2 border-white hover:bg-tertiary hover:text-white hover:border-tertiary;
+  }
+  .btn-secondary {
+    @apply inline-flex justify-center items-center p-2.5 rounded-full capitalize font-bold text-sm lg:text-base transition-colors ease-in-out duration-300 bg-transparent text-secondary border-2 border-secondary hover:bg-secondary hover:text-neutral hover:border-tertiary;
+  }
+  .btn-tertiary {
+    @apply w-full lg:w-52 inline-flex justify-center items-center px-6 py-2.5 rounded-full capitalize font-bold text-sm lg:text-base transition-colors ease-in-out duration-300 bg-secondary text-white border-2 border-white hover:bg-tertiary hover:text-neutral hover:border-tertiary;
+  }
+}
+
+@layer utilities {
+  .base-title {
+    @apply font-the-signature text-[86px] lg:text-9xl whitespace-nowrap leading-[0.3] lg:leading-[0.1];
+  }
+  .base-subtitle-1 {
+    @apply font-the-signature text-primary text-[54px] lg:text-[84px] whitespace-nowrap leading-[0.3] lg:leading-[0.5];
+  }
+  .base-subtitle-2 {
+    @apply font-ubounded text-2xl lg:text-[54px] lg:leading-relaxed;
+  }
+  .base-subtitle-3 {
+    @apply font-ubounded text-[22px] lg:text-[32px] font-bold;
+  }
+  .base-text-body-1 {
+    @apply font-albert-sans text-base lg:text-2xl;
+  }
+  .base-text-body-2 {
+    @apply font-albert-sans text-sm;
+  }
+}
