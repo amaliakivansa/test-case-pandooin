@@ -8,10 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#0B7373",
+        secondary: "#004040",
+        tertiary: "#D6B66B",
+        "neutral" : "#FAF9F5"
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hero-image": "url('/images/website-header.png')",
+        "advertisement-image": "url('/images/bg-advertisement.png')",
+      },
+      fontFamily: {
+        "the-signature": ['"The Signature"', "sans-serif"],
+        ubounded: ['"Unbounded"', "sans-serif"],
+        "albert-sans": ['"Albert Sans"', "sans-serif"],
       },
     },
   },
