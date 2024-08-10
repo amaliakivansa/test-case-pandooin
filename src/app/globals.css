@@ -7,78 +7,97 @@ body {
 }
 
 @layer base {
+  /* Consolidate font-face declarations */
   @font-face {
     font-family: "The Signature";
-    font-style: normal;
     font-weight: 400;
+    font-style: normal;
     font-display: swap;
     src: url(/fonts/TheSignature.ttf) format("truetype");
   }
+
   @font-face {
     font-family: "Albert Sans";
     font-style: normal;
-    font-weight: 400;
     font-display: swap;
+    font-weight: 400;
     src: url(/fonts/AlbertSans/AlbertSans-Regular.ttf) format("truetype");
   }
+
   @font-face {
     font-family: "Albert Sans";
     font-style: normal;
-    font-weight: 700;
     font-display: swap;
+    font-weight: 700;
     src: url(/fonts/AlbertSans/AlbertSans-Bold.ttf) format("truetype");
   }
+
   @font-face {
     font-family: "Unbounded";
     font-style: normal;
-    font-weight: 400;
     font-display: swap;
+    font-weight: 400;
     src: url(/fonts/unbounded/Unbounded-Regular.ttf) format("truetype");
   }
+
   @font-face {
     font-family: "Unbounded";
     font-style: normal;
-    font-weight: 500;
     font-display: swap;
+    font-weight: 500;
     src: url(/fonts/unbounded/Unbounded-Medium.ttf) format("truetype");
   }
+
   @font-face {
     font-family: "Unbounded";
     font-style: normal;
-    font-weight: 700;
     font-display: swap;
+    font-weight: 700;
     src: url(/fonts/unbounded/Unbounded-Bold.ttf) format("truetype");
   }
 }
 
 @layer components {
+  /* Use a base button class for shared styles */
+  .btn {
+    @apply inline-flex justify-center items-center capitalize font-bold text-sm lg:text-base transition-colors ease-in-out duration-300 rounded-full;
+  }
+
   .btn-primary {
-    @apply inline-flex justify-center items-center px-6 py-2.5 rounded-full capitalize font-bold text-sm lg:text-base transition-colors ease-in-out duration-300 bg-transparent text-white border-2 border-white hover:bg-tertiary hover:text-white hover:border-tertiary;
+    @apply btn px-6 py-2.5 bg-transparent text-white border-2 border-white hover:bg-tertiary hover:text-white hover:border-tertiary;
   }
+
   .btn-secondary {
-    @apply inline-flex justify-center items-center p-2.5 rounded-full capitalize font-bold text-sm lg:text-base transition-colors ease-in-out duration-300 bg-transparent text-secondary border-2 border-secondary hover:bg-secondary hover:text-neutral hover:border-tertiary;
+    @apply btn p-2.5 bg-transparent text-secondary border-2 border-secondary hover:bg-secondary hover:text-neutral;
   }
+
   .btn-tertiary {
-    @apply w-full lg:w-52 inline-flex justify-center items-center px-6 py-2.5 rounded-full capitalize font-bold text-sm lg:text-base transition-colors ease-in-out duration-300 bg-secondary text-white border-2 border-white hover:bg-tertiary hover:text-neutral hover:border-tertiary;
+    @apply btn w-full lg:w-52 px-6 py-2.5 bg-secondary text-white border-2 border-white hover:bg-tertiary hover:text-neutral hover:border-tertiary;
   }
 }
 
 @layer utilities {
+  /* Use variables or base classes for common styles */
   .base-title {
     @apply font-the-signature text-[86px] lg:text-9xl whitespace-nowrap leading-[0.3] lg:leading-[0.1];
   }
+
   .base-subtitle-1 {
     @apply font-the-signature text-primary text-[54px] lg:text-[84px] whitespace-nowrap leading-[0.3] lg:leading-[0.5];
   }
+
   .base-subtitle-2 {
     @apply font-ubounded text-2xl lg:text-[54px] lg:leading-relaxed;
   }
+
   .base-subtitle-3 {
     @apply font-ubounded text-[22px] lg:text-[32px] font-bold;
   }
+
   .base-text-body-1 {
     @apply font-albert-sans text-base lg:text-2xl;
   }
+
   .base-text-body-2 {
     @apply font-albert-sans text-sm;
   }
