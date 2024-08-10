@@ -7,7 +7,7 @@ import { IFetchArticleResponse } from "@/types/common";
 const SectionArticle = () => {
   const { data, isLoading } = useFetchArticles();
   return (
-    <section className="mt-[54px] p-4 lg:px-44">
+    <section id="article" className="mt-[54px] p-4 lg:px-44">
       <h1 className="base-subtitle-3 text-primary">Articles</h1>
       <p className="base-text-body-1 text-primary">Our curated writings, offering something for every reader.</p>
       {isLoading && <p className="font-albert-sans">Loading...</p>}

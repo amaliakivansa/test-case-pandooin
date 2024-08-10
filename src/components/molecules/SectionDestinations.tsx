@@ -21,7 +21,7 @@ const SectionDestinations = () => {
     </>
   );
   return (
-    <section className="p-4 lg:px-44">
+    <section id="destination" className="p-4 lg:px-44">
       <div className="flex flex-col lg:flex-row lg:items-center gap-4">
         <h1 className="base-subtitle-3 text-secondary">Destinations</h1>
         <div className="flex items-center gap-4 sm:mt-4 lg:mt-0">

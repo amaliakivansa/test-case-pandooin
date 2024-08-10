@@ -5,7 +5,7 @@ type Props = {};
 
 const SectionTailored = (props: Props) => {
   return (
-    <section className="mt-14 p-4 lg:px-44">
+    <section id="customize-your-trip" className="mt-14 p-4 lg:px-44">
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <Image
           src="/images/tailored.svg"
