@@ -32,18 +32,26 @@ const SectionFootage = () => {
       </div>
       <div className="hidden w-full lg:grid grid-cols-3 gap-6 px-44 mt-6">
         {footagePicts.map((footagePict, idx) => (
-          <div
-            key={idx}
-            className="relative w-full aspect-[356/256] cursor-pointer"
-            onClick={() => openFullscreen(idx)}
-          >
-            <Image
-              src={footagePict.src}
-              fill
-              alt="footage"
-              className="w-full h-full absolute object-cover object-center"
-            />
-          </div>
+          <React.Fragment key={idx}>
+            <div
+              className="relative w-full aspect-[356/256] cursor-pointer"
+              onClick={() => openFullscreen(idx)}
+            >
+              <Image
+                src={footagePict.src}
+                fill
+                alt="footage"
+                className="w-full h-full absolute object-cover object-center"
+              />
+            </div>
+            {idx === 2 && (
+              <img
+                src="/images/seperator-white.svg"
+                alt="Footage 7"
+                className="w-full col-span-3"
+              />
+            )}
+          </React.Fragment>
         ))}
       </div>
 
